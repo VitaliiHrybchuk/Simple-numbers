@@ -1,11 +1,10 @@
 'use strict';
 
-
-for(let i = 1; i <= 100; i++){
-  (i % 1 === 0) && (i % i === 0) &&
-  // i === 101; break;
-  console.log(`${i}`);
-
-
+first:for (let i = 2; i <= 100; i++){
+  for (let j = 2; j < i; j++){
+    if (i % j === 0){
+      continue first;
+    }
+  }
+console.log(`${i} is a simple number`);
 }
-  
